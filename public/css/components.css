@@ -1,0 +1,164 @@
+/* card */
+.card {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* circulito */
+.circulito {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--gray-base);
+  display: block;
+}
+
+/* Section title */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  height: 60px;
+}
+.section-title .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.section-title .action .link {
+  text-decoration: none;
+  color: var(--azulito);
+}
+
+.section-title.-big .title {
+  font-size: 24px;
+}
+
+/* Story */
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 110px;
+  height: 195px;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 9px rgba(0,0,0,0.2);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.story:after{
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(1,0,23,0.7189250700280112) 4%, rgba(0,0,0,0) 75%);
+  z-index: 2
+}
+
+.story .image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.story .author {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  box-sizing: border-box;
+  z-index: 3;
+  overflow: hidden;
+  position: relative;
+}
+
+.story .author.-own{
+  position: relative;
+}
+.story .author.-own:after{
+  content: "+";
+  position: absolute;
+  z-index: 1;
+  font-size: 24px;
+}
+
+.story .author.-own .image{
+  background-position: -14px -13px;
+  filter: blur(3px);
+  -webkit-filter: grayscale(0) blur(4px);
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+.story .title {
+  color: white;
+  z-index: 3;
+}
+
+/* item.list */
+.item-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.item-list .image {
+  margin-right: 8px;
+}
+
+.item-list .name {
+  font-weight: 500px;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  height: 60px;
+}
+.sidebar-title .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidebar-title .action .link {
+  text-decoration: none;
+  color: var(--azulito);
+}
+
+/* Post item */
+.post-item{
+  background-color: white;
+}
+
+.post-item .post-header{
+  padding: 16px;
+}
+
+.post-item .post-text{
+  margin: 0;
+  font-size: 18px;
+}
+
+.post-item .image{
+  vertical-align: top;
+}

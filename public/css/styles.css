@@ -1,0 +1,195 @@
+:root {
+  --gray-base: #e4e6ec;
+  --azulito: #477beb;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Helpers */
+
+.center-xy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- */
+
+.container {
+  display: grid;
+  grid-template-columns: 360px 1fr 360px;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 360px 1fr 360px;
+  grid-template-rows: 1fr;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+.header .main {
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.header .brand {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--gray-base);
+  margin-right: 0.5em;
+}
+
+.header .search {
+  background-color: var(--gray-base);
+  border-radius: 18px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
+  box-sizing: border-box;
+}
+
+.header .search .search-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+.header .search .search-icon {
+  width: 16px;
+}
+.header .search .search-input {
+  font-size: 14px;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.header .nav .item {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+}
+
+.header .nav .item.-active:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: var(--azulito);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .nav .item.-active .icon {
+  background-color: var(--azulito);
+}
+
+.header .nav .item:hover:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: var(--azulito);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .nav .item a {
+  width: 80px;
+}
+
+.header .settings {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.main-nav {
+  margin: 0 16px;
+}
+
+.timeline {
+  background-color: var(--gray-base);
+  padding: 0 16px;
+  padding-bottom: 16px;
+}
+
+.timeline .stories-section {
+  max-width: 582px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.timeline .stories-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 -4px;
+}
+
+.timeline .stories-list .story {
+  margin: 0 4px;
+}
+
+.timeline .add-post {
+  margin: auto;
+  margin-top: 16px;
+  background-color: #fff;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 16px;
+}
+
+.timeline .add-post .button-main {
+  flex: 1 1 0;
+  margin: 0 8px;
+  border: 0;
+  background-color: var(--gray-base);
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.timeline .post-list {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.timeline .post-list .post-item {
+  margin-bottom: 16px;
+}
+
+.sidebar {
+  margin: 0 16px;
+}
